@@ -4,7 +4,6 @@ import { TimeDisplay } from './TimeDisplay';
 import { LapList } from './LapList';
 import { createUseStyles } from 'react-jss';
 import { ITheme } from '../../static/types';
-import { AnalogClockContainer } from './analogClock/AnalogClockContainer';
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     watchDisplay: {
@@ -12,7 +11,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         justifyContent: 'center',
         fontFamily: 'Helvetica',
         color: theme.contrast03,
-        fontSize: 96,
+        fontSize: 88,
         margin: 'auto',
     },
     wrapper: {
@@ -61,7 +60,6 @@ export const WatchContainer: React.FC = () => {
     return (
         <div className={wrapper}>
             <TimeDisplay className={watchDisplay} time={time} />
-            <AnalogClockContainer time={time} />
             <WatchControls {...controlProps} />
             <LapList lapData={laps}/>
         </div>

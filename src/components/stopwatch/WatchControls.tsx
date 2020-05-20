@@ -12,7 +12,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
     button: {
         height: 80,
         width: 104,
-        margin: [0, 16],
+        margin: [0, 64],
         fontFamily: 'Helvetica',
         fontSize: 24,
         color: theme.contrast03,
