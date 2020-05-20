@@ -1,0 +1,49 @@
+{
+  "name": "stopwatch-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Michael Stanton <mstanton98@gmail.com>",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "jsxBracketSameLine": true,
+    "bracketSpacing": false
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^25.2.3",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-jss": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.0.1",
+    "jest-enzyme": "^7.1.2",
+    "prettier": "^2.0.5",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.1.1"
+  }
+}
