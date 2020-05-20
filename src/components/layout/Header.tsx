@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import {createUseStyles} from 'react-jss';
-import { ITheme } from "../../static/types";
+import { ITheme } from '../../static/types';
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     header: {
@@ -14,6 +14,9 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         fontFamily: 'Helvetica',
         color: theme.contrast03,
         padding: [0, 16],
+        transition: '.5s ease color',
+        //add static shadow to theme
+        textShadow: [2, 2, '#313131'],
         '& > a': {
             marginLeft: '0',
             marginRight: 'auto',
@@ -45,7 +48,7 @@ export const Header: React.FC<IHeaderProps> = ({switchTheme}) => {
     const {header, button} = useStyles();
     return (
         <nav className={header}>
-            <a className={button} href="" target="_blank">Github</a>
+            <a className={button} href='' target='_blank'>Github</a>
             <span>React Timer</span>
             <button className={button} onClick={switchTheme}>Switch Theme</button>
         </nav>

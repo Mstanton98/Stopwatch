@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
 import { ThemeProvider } from 'react-jss'
 import {light, dark} from '../static/themes';
-import { Header } from "./layout/Header";
-import { Section } from "./layout/Section";
+import { Header } from './layout/Header';
+import { PageWrapper } from './layout/PageWrapper';
+import { WatchContainer } from './stopwatch/WatchContainer';
 
 export type ThemeType = 'light' | 'dark';
 
@@ -14,9 +15,9 @@ export const App: React.FC = () => {
     return (
         <ThemeProvider theme={themesMap[theme]}>
             <Header switchTheme={() => switchTheme(theme === 'dark' ? 'light' : 'dark')} />
-            <Section>
-
-            </Section>
+            <PageWrapper>
+                <WatchContainer />
+            </PageWrapper>
         </ThemeProvider>
     );
 }

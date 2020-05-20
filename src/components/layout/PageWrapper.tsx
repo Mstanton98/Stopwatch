@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { ITheme } from "../../static/types";
+import { ITheme } from '../../static/types';
 
 const useStyles = createUseStyles((theme: ITheme) => ({
-    section: {
+    pageWrapper: {
         display: 'flex',
         justifyContent: 'center',
         position: 'relative',
         background: theme.contrast01,
-        padding: 24,
+        padding: [24, 24, 0, 24],
         height: 'calc(100vh - 80px)',
         boxSizing: 'border-box',
     },
 }));
 
-export const Section: React.FC = ({ children }) => {
-    const {section} = useStyles();
+export const PageWrapper: React.FC = ({ children }) => {
+    const {pageWrapper} = useStyles();
 
     return (
-        <section className={section}>{children}</section>
+        <div className={pageWrapper}>{children}</div>
     )
 };
