@@ -4,6 +4,7 @@ import { TimeDisplay } from './TimeDisplay';
 import { LapList } from './LapList';
 import { createUseStyles } from 'react-jss';
 import { ITheme } from '../../static/types';
+import { AnalogClockContainer } from './analogClock/AnalogClockContainer';
 
 const useStyles = createUseStyles((theme: ITheme) => ({
     watchDisplay: {
@@ -12,7 +13,6 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         fontFamily: 'Helvetica',
         color: theme.contrast03,
         fontSize: 96,
-        maxWidth: 1366,
         margin: 'auto',
     },
     wrapper: {
@@ -29,7 +29,7 @@ export interface ITimerState {
 }
 
 export const WatchContainer: React.FC = () => {
-    const {watchDisplay, wrapper} = useStyles();
+    const { watchDisplay, wrapper } = useStyles();
     const [{ time, timerOn }, setTimer] = React.useState<ITimerState>({ timerOn: false, time: 0, timerStart: 0 });
     const [laps, setLaps] = React.useState<number[]>([]);
     const timer = React.useRef(null);
@@ -61,6 +61,7 @@ export const WatchContainer: React.FC = () => {
     return (
         <div className={wrapper}>
             <TimeDisplay className={watchDisplay} time={time} />
+            <AnalogClockContainer time={time} />
             <WatchControls {...controlProps} />
             <LapList lapData={laps}/>
         </div>

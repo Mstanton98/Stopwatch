@@ -37,6 +37,8 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         background: theme.contrast01,
         marginLeft: 'auto',
         cursor: 'pointer',
+        //TODO add shadow color to theme
+        boxShadow: [1, 1, 0, 0, '#757575'],
     },
 }));
 
@@ -48,7 +50,7 @@ export const Header: React.FC<IHeaderProps> = ({switchTheme}) => {
     const {header, button} = useStyles();
     return (
         <nav className={header}>
-            <a className={button} href='' target='_blank'>Github</a>
+            <a className={button} href='https://github.com/Mstanton98/Stopwatch' target='_blank'>Github</a>
             <span>React Timer</span>
             <button className={button} onClick={switchTheme}>Switch Theme</button>
         </nav>

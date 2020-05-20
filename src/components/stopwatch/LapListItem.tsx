@@ -8,7 +8,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 64,
+        minHeight: 64,
         fontSize: 32,
         fontFamily: 'Helvetica',
         width: '100vw',
@@ -35,7 +35,7 @@ export const LapListItem: React.FC<ILapListItemProps> = ({ lapNumber, time }) =>
 
     return (
         <li className={lapListItem}>
-            <span>{lapNumber}</span>
+            <span>{ lapNumber }</span>
             <TimeDisplay className={lapTimeDisplay} time={time}/>
         </li>
     );

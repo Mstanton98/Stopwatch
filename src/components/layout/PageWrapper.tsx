@@ -9,6 +9,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         position: 'relative',
         background: theme.contrast01,
         padding: [24, 24, 0, 24],
+        transition: '.5s ease color',
         height: 'calc(100vh - 80px)',
         boxSizing: 'border-box',
     },
