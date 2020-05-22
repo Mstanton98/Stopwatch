@@ -4,9 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npx webpack",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npx webpack && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +29,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.3.0",
     "prettier": "^2.0.5",
     "source-map-loader": "^0.2.4",
