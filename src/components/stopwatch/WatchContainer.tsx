@@ -10,15 +10,18 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         display: 'flex',
         justifyContent: 'center',
         fontFamily: 'Helvetica',
+        width: '100%',
         color: theme.contrast03,
         fontSize: 88,
         margin: 'auto',
+        boxSizing: 'border-box',
     },
     wrapper: {
         display: 'flex',
         flexDirection: 'column',
         position: 'relative',
         width: '100%',
+        boxSizing: 'border-box',
     },
 
 }));

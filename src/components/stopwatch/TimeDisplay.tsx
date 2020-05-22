@@ -12,9 +12,7 @@ export const TimeDisplay: React.FC<ITimeDisplayProps> = ({ className, time }) =>
 
     return (
         <time className={className}>
-            {minutes} : &nbsp;
-            {seconds} . &nbsp;
-            {centiseconds}
+            {minutes}:{seconds}.{centiseconds}
         </time>
     );
 }
