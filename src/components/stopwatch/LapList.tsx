@@ -6,17 +6,21 @@ import { ITheme } from '../../static/types';
 const useStyles = createUseStyles((theme: ITheme) => ({
     lapList: {
         display: 'flex',
-        justifyContent: 'flex-start',
+        justifyContent: 'flex-end',
         flexDirection: 'column-reverse',
         alignSelf: 'flex-end',
-        margin: [16, 0, 0, 0],
-        overflow: 'scroll',
         width: '100vw',
-        background: theme.themeBase,
         listStyle: 'none',
         paddingLeft: 0,
         transition: '.5s ease color',
-        height: 128,
+        height: 256,
+        marginTop: 0,
+        marginBottom: 0,
+    },
+    wrapper: {
+        overflow: 'scroll',
+        background: theme.themeBase,
+        margin: [16, 0, 0, 0],
     },
 }));
 
@@ -25,19 +29,20 @@ export interface ILapListProps {
 }
 
 export const LapList: React.FC<ILapListProps> = ({ lapData }) => {
-    const { lapList } = useStyles();
+    const { lapList, wrapper } = useStyles();
     const scrollRef = React.useRef();
 
     React.useEffect(() => {
         const currentRef: HTMLDivElement = scrollRef.current;
 
         if (currentRef !== undefined) {
-            currentRef.scrollIntoView({ behavior: "smooth" });
+            currentRef.scrollIntoView();
         }
 
     }, [lapData])
     
     return (
+        <div className={wrapper}>
             <ol className={lapList}>
                 {lapData.map((time: number, index: number) => 
                     <LapListItem 
@@ -47,5 +52,6 @@ export const LapList: React.FC<ILapListProps> = ({ lapData }) => {
                     )}
                     <li ref={scrollRef}></li>
             </ol>
+        </div>
     );
 }
