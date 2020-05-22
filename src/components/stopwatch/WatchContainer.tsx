@@ -17,6 +17,8 @@ const useStyles = createUseStyles((theme: ITheme) => ({
     wrapper: {
         display: 'flex',
         flexDirection: 'column',
+        position: 'relative',
+        width: '100%',
     },
 
 }));
