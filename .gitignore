@@ -4,5 +4,6 @@ node_modules
 ## Built Files
 dist
 
-## OS files
+## OS/Project files
 .DS_Store
+.gitignore
