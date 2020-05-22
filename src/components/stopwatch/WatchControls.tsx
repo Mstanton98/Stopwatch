@@ -16,8 +16,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         fontFamily: 'Helvetica',
         fontSize: 24,
         color: theme.contrast03,
-        //TODO add shadow color to theme
-        boxShadow: [1, 1, 1, 1, '#757575'],
+        boxShadow: [1, 1, 1, 1, theme.shadow],
         borderRadius: 4,
         background: theme.contrast01,
     }

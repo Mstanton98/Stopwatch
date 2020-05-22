@@ -42,7 +42,7 @@ export const LapList: React.FC<ILapListProps> = ({ lapData }) => {
                 {lapData.map((time: number, index: number) => 
                     <LapListItem 
                     key={index} 
-                    time={time} 
+                    time={lapData[index - 1] ? time - lapData[index - 1] : time}
                     lapNumber={index + 1} />
                     )}
                     <li ref={scrollRef}></li>

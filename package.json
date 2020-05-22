@@ -22,6 +22,7 @@
     "@types/react-jss": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
+    "css-loader": "^3.5.3",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
@@ -37,7 +38,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.1.1",
+    "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-jss": "^10.1.1"

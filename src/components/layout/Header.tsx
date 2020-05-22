@@ -37,8 +37,7 @@ const useStyles = createUseStyles((theme: ITheme) => ({
         background: theme.contrast01,
         marginLeft: 'auto',
         cursor: 'pointer',
-        //TODO add shadow color to theme
-        boxShadow: [1, 1, 0, 0, '#757575'],
+        boxShadow: [1, 1, 0, 0, theme.shadow],
     },
 }));
 
